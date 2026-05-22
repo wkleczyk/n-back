@@ -42,7 +42,7 @@ def generate_trials(n, num_trials, target_ratio):
 
     for i in range(num_trials):
 
-        # przypadek pierwszy: próba wylosowana jako target - ustawienie takiej samej litery n prób
+        # przypadek pierwszy: próba wylosowana jako target - ustawienie takiej samej litery n prób wcześniej
         if i in target_idx:
             trials[i]["stimulus"] = trials[i - n]["stimulus"]
             trials[i]["is_target"] = True
@@ -52,7 +52,7 @@ def generate_trials(n, num_trials, target_ratio):
         else:
             available_letters = possible_letters.copy()
 
-            # dla n tej próby usuwamy z listy możliwych do wyloswania liter, tę która pojawiła się n prób wcześniej
+            # dla n tej próby usuwamy z listy możliwych do wyloswania liter tę, która pojawiła się n prób wcześniej
             if i >= n:
                 previous_n_back = trials[i - n]["stimulus"]
 
