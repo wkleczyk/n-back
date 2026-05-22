@@ -1,0 +1,5 @@
+n_back: 3
+target_ratio: 0.3
+
+training_num_trials: 20
+experimental_num_trials: 40
