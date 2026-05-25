@@ -47,11 +47,11 @@ def short_instructions(win):
     short_instruction_win = visual.TextBox2(
         win=win,
         alignment="center",
-        text=config["instructions"]["short_instruction"],
+        text=config["instructions"]["short_instruction"].
+        format(n=config["n_back"]),
         letterHeight=config["text"]["letter_height"],
         color=config["colors"]["text"],
-        size=config["text"]["textbox_size"]
-    )
+        size=config["text"]["textbox_size"])
 
     while True:
 #loop służacy możliwości przejścia do kolejnego etapu badania
