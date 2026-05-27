@@ -237,7 +237,7 @@ def run_block(win, trials, config, feedback=False):
         win.flip()
         core.wait(5)
 
-    return results
+    return results, non_target_accuracy, target_accuracy
 
 # check programu
 
