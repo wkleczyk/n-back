@@ -9,10 +9,10 @@ import datetime
 config = load_config('../config.yaml')
 n_back=config['n_back']
 
-BASE_DIR = Path(__file__).resolve().parent.parent    #lokalizacje folderów 
-RESULTS_DIR = BASE_DIR / "results"
+base_dir = Path(__file__).resolve().parent.parent    #lokalizacje folderów 
+results_dir = base_dir / "results"
 
-RESULTS_DIR.mkdir(exist_ok=True)
+results_dir.mkdir(exist_ok=True)
 
 def generate_id(outfile): #generuje unikalne id dla każdego uczestnika, outfile - plik zbiorczy z wynikami
     path=Path(outfile)
@@ -43,7 +43,7 @@ def get_info(participant_id): #wprowadzenie i zapisanie do słownika danych ucze
 
 def save_individual_results(participant_id, results):
 
-    filename = RESULTS_DIR/f"results_{participant_id}.csv"  # nazwa pliku, do którego zostają zapisane wyniki badanego
+    filename = results_dir/f"results_{participant_id}.csv"  # nazwa pliku, do którego zostają zapisane wyniki badanego
 
     with open(filename, mode="w", newline="") as file:  # tworzy plik z wynikami badanego w każdej próbie
         fieldnames=['stimulus', 'is_target', 'response', 'rt', 'correct']
@@ -53,7 +53,7 @@ def save_individual_results(participant_id, results):
         #for result in results:                      #zapisuje w pliku każdą próbę
         writer.writerows(results)
 
-def save_results(outfile, info):
+def save_results(outfile, info, target_accuracy, non_target_accuracy):
     path=Path(outfile)          #ścieżka do pliku
 
     if not path.exists():       #jeśli plik nie istnieje, stwórz go
@@ -76,8 +76,8 @@ def save_results(outfile, info):
         "gender": info['gender'],
         "age": info['age'],
         "n_level": n_back,
-        "target_accuracy": None,
-        "non_target_accuracy": None,
+        "target_accuracy": target_accuracy,
+        "non_target_accuracy": non_target_accuracy,
         "date_time": datetime.datetime.now()
     }
 
@@ -90,7 +90,7 @@ def save_results(outfile, info):
 
 
 if __name__ == "__main__":
-    outfile = RESULTS_DIR / "all_results.csv"
+    outfile = results_dir / "all_results.csv"
 
     participant_id = generate_id(outfile)
 
