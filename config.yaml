@@ -3,3 +3,60 @@ target_ratio: 0.3
 
 training_num_trials: 20
 experimental_num_trials: 40
+
+#interface
+colors:
+  background: black
+  text: lightgray
+
+text:
+  letter_height: 20
+  textbox_size: [1200, 1000]
+
+window:
+  size: [1920,1080]
+
+stim:
+  color: yellow
+  letter_height: 40
+
+timing:
+  response_window: 2.5
+  stimulus_duration: 0.5
+
+feedback:
+  text_color: limegreen
+  letter_height: 100
+  accuracy: |
+    Traficzność odpowiedzi (targety): {target_accuracy:.1f}%
+    Poprawne odrzucenia (non-targety): {non_target_accuracy:.1f}%
+
+instructions:
+  main_instruction: |
+    Na ekranie będą pojawiały się pojedyncze litery.
+
+    Twoim zadaniem jest nacisnąć spację wtedy,
+    gdy aktualna litera jest taka sama jak 
+    litera pokazana {n} próby wcześniej.
+
+    Jeśli litera nie spełnia tego warunku,
+    nie naciskaj żadnego klawisza.
+
+    Staraj się odpowiadać jak najszybciej
+    i jak najdokładniej.
+
+    Naciśnij spację, aby rozpocząć trening.
+
+  short_instruction: |
+    Za chwilę rozpocznie się właściwa część zadania.
+
+    Pamiętaj:
+    naciskaj spację tylko wtedy, gdy litera jest taka sama jak litera sprzed {n} prób,
+    odpowiadaj możliwie szybko i dokładnie.
+
+    Naciśnij spację, aby rozpocząć.
+
+  thanks: |
+    To koniec zadania.
+
+    Dziękujemy za udział w badaniu.
