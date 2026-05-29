@@ -12,8 +12,9 @@ def load_config(path="config.yaml"):
 
 def generate_trials(n, num_trials, target_ratio):
 
-    # zbiór bodźców, z którego bedziemy losować
-    possible_letters = list(string.ascii_uppercase)
+    # zbiór bodźców, z którego bedziemy losować - spółgłoski
+    vowels = set("AEIOUY")
+    possible_letters = [let for let in string.ascii_uppercase if let not in vowels]
 
     # lista do przechowywania prób
     trials = []
