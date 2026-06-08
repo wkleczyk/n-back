@@ -1,0 +1,35 @@
+n_back: 3
+target_ratio: 0.3
+
+training_num_trials: 20
+experimental_num_trials: 40
+
+#interface
+colors:
+  background: black
+  text: lightgray
+
+text:
+  letter_height: 20
+  textbox_size: [1200, 1000]
+
+window:
+  size: [1920,1080]
+
+stim:
+  color: yellow
+  letter_height: 40
+
+timing:
+  response_window: 2.5
+  stimulus_duration: 0.5
+  feedback: 5
+
+feedback:
+  text_color: limegreen
+  letter_height: 100
+  accuracy: |
+    Trafność odpowiedzi (targety): {target_accuracy:.1f}%
+    Poprawne odrzucenia (non-targety): {non_target_accuracy:.1f}%
+
+
