@@ -1,6 +1,6 @@
 from psychopy import visual, core, event, gui
 from pathlib import Path
-from src2 import trials_generator2, save_results2
+from src import trials_generator2, save_results2
 
 #załadowanie config
 config = trials_generator2.load_config()
