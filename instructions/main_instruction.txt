@@ -1,0 +1,13 @@
+Na ekranie będą pojawiały się pojedyncze litery.
+
+    Twoim zadaniem jest nacisnąć spację wtedy,
+    gdy aktualna litera jest taka sama jak 
+    litera pokazana 3 próby wcześniej.
+
+    Jeśli litera nie spełnia tego warunku,
+    nie naciskaj żadnego klawisza.
+
+    Staraj się odpowiadać jak najszybciej
+    i jak najdokładniej.
+
+    Naciśnij spację, aby rozpocząć trening.
