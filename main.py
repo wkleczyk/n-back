@@ -166,7 +166,7 @@ dlg.addField('age', required=True)
 info=dlg.show()
 
 #wygenerowanie id i zebranie info o uczestniku w słowniku
-participant_id = save_results2.generate_id(outfile)
+participant_id = save_results.generate_id(outfile)
 info_dict={
     'gender': info[0],
     'age': info[1],
