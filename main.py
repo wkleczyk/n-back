@@ -181,7 +181,7 @@ win = visual.Window(
 )
 
 #prezentacja głównej instrukcji
-with open("text/main_instruction.txt", "r", encoding="utf-8") as main_instruction:
+with open("instructions/main_instruction.txt", "r", encoding="utf-8") as main_instruction:
     main_instruction = main_instruction.read()
 
 instruction_win = visual.TextBox2(
@@ -218,7 +218,7 @@ training_results, training_non_target_acc, training_target_acc = run_block(win, 
 
 
 #prezentacja skróconej instrukcji
-with open("text/short_instruction.txt", "r", encoding="utf-8") as short_instruction:
+with open("instructions/short_instruction.txt", "r", encoding="utf-8") as short_instruction:
     short_instruction = short_instruction.read()
 
 short_instruction_win = visual.TextBox2(
@@ -258,7 +258,7 @@ save_results.save_individual_results(participant_id, experiment_results)
 save_results.save_results(outfile, info_dict, experiment_target_accuracy, experiment_non_target_accuracy)
 
 #wyświetlenie podziękowań
-with open("text/thanks.txt", "r", encoding="utf-8") as thanks:
+with open("instructions/thanks.txt", "r", encoding="utf-8") as thanks:
     thanks = thanks.read()
 
 thanks_win = visual.TextBox2(
