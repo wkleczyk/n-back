@@ -4,7 +4,7 @@ from psychopy import gui
 import random
 from pathlib import Path
 import datetime
-from src.trials_generator import load_config
+from trials_generator import load_config
 
 config = load_config()
 n_back=config['n_back']
