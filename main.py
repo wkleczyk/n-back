@@ -208,7 +208,7 @@ while True:
 
 
 #wygenerowanie sesji treningowej
-training = trials_generator2.generate_trials(n=config["n_back"],
+training = trials_generator.generate_trials(n=config["n_back"],
         num_trials=config["training_num_trials"],
         target_ratio=config["target_ratio"])
 
@@ -244,7 +244,7 @@ while True:
         break
 
 #wygenerowanie sesji eksperymentalnej
-experiment = trials_generator2.generate_trials(n=config["n_back"],
+experiment = trials_generator.generate_trials(n=config["n_back"],
         num_trials=config["experimental_num_trials"],
         target_ratio=config["target_ratio"])
 
@@ -252,10 +252,10 @@ experiment = trials_generator2.generate_trials(n=config["n_back"],
 experiment_results, experiment_non_target_accuracy, experiment_target_accuracy = run_block(win, experiment, config, feedback=True)
 
 #zachowanie do pliku csv wyników każdej próby pojedynczego uczestnika
-save_results2.save_individual_results(participant_id, experiment_results)
+save_results.save_individual_results(participant_id, experiment_results)
 
 #zachowanie do zbiorczego pliku csv info o każdym uczestniku
-save_results2.save_results(outfile, info_dict, experiment_target_accuracy, experiment_non_target_accuracy)
+save_results.save_results(outfile, info_dict, experiment_target_accuracy, experiment_non_target_accuracy)
 
 #wyświetlenie podziękowań
 with open("text/thanks.txt", "r", encoding="utf-8") as thanks:
