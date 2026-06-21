@@ -1,9 +1,9 @@
 from psychopy import visual, core, event, gui
 from pathlib import Path
-from src import trials_generator2, save_results2
+from src import trials_generator, save_results
 
 #załadowanie config
-config = trials_generator2.load_config()
+config = trials_generator.load_config()
 
 
 #stworzenie plików na wyniki
