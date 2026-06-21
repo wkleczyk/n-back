@@ -4,7 +4,7 @@ import yaml
 from pathlib import Path
 
 
-def load_config(path=Path(__file__).resolve().parent.parent / "config2.yaml"):
+def load_config(path=Path(__file__).resolve().parent.parent / "config.yaml"):
     # wczytywanie danych konfiguracyjnych z config.yaml
 
     with open(path, "r", encoding="utf-8") as file:
@@ -83,7 +83,7 @@ def generate_trials(n, num_trials, target_ratio):
 
 
 if __name__ == "__main__":
-    config = load_config("../config2.yaml")
+    config = load_config("../config.yaml")
 
     training_trials = generate_trials(n=config["n_back"],
         num_trials=config["training_num_trials"],
