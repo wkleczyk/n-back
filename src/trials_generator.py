@@ -33,7 +33,7 @@ def generate_trials(n, num_trials, target_ratio):
     possible_target_idx = range(n, num_trials)
 
     # jaki procent prób mają stanowić targety
-    num_targets = int(len(possible_target_idx) * target_ratio)  #a nie % od liczby wszystkich prób?
+    num_targets = int(len(possible_target_idx) * target_ratio)  
 
     # losowanie indeksów prób, które będą targetami
     target_idx = random.sample(list(possible_target_idx), num_targets)
