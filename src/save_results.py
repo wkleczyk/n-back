@@ -26,20 +26,6 @@ def generate_id(outfile): #generuje unikalne id dla każdego uczestnika, outfile
     else: new_id = random.randint(1000, 9999)   #jeśli nie ma innych badanych, id jest dowolne
     return new_id       #zwraca losowego inta w przedziale 1000-9999
 
-def get_info(participant_id): #wprowadzenie i zapisanie do słownika danych uczestnika
-    dlg=gui.Dlg(title="Personal info")
-    dlg.addField('gender', choices=['Female', 'Male', 'Prefer not to say'], required=True)
-    dlg.addField('age', required=True)
-
-    info=dlg.show()
-
-    info_dict={
-        'gender': info[0],
-        'age': info[1],
-        'id': participant_id
-    }
-
-    return info_dict #zwraca słownik z płcią, wiekiem i id uczestnika
 
 def save_individual_results(participant_id, results):
 
