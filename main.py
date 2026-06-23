@@ -187,10 +187,12 @@ with open("instructions/main_instruction.txt", "r", encoding="utf-8") as main_in
 instruction_win = visual.TextBox2(
         win=win,
         alignment="center",
-        text=main_instruction, #config["instructions"]["main_instruction"].format(n=config["n_back"])
+        text=main_instruction, 
         letterHeight=config["text"]["letter_height"],
         color=config["colors"]["text"],
         size=config["text"]["textbox_size"])
+
+event.clearEvents()
 
 while True:
             #loop służacy możliwości przejścia do kolejnego etapu badania
@@ -224,10 +226,12 @@ with open("instructions/short_instruction.txt", "r", encoding="utf-8") as short_
 short_instruction_win = visual.TextBox2(
         win=win,
         alignment="center",
-        text=short_instruction, #config["instructions"]["short_instruction"].format(n=config["n_back"])
+        text=short_instruction, 
         letterHeight=config["text"]["letter_height"],
         color=config["colors"]["text"],
         size=config["text"]["textbox_size"])
+
+event.clearEvents()
 
 while True:
             #loop służacy możliwości przejścia do kolejnego etapu badania
@@ -264,11 +268,13 @@ with open("instructions/thanks.txt", "r", encoding="utf-8") as thanks:
 thanks_win = visual.TextBox2(
         win=win,
         alignment="center",
-        text=thanks, #config["instructions"]["thanks"]
+        text=thanks, 
         letterHeight=config["text"]["letter_height"],
         color=config["colors"]["text"],
         size=config["text"]["textbox_size"]
     )
+
+event.clearEvents()
 
 while True:
             # loop służacy możliwości przejścia do kolejnego etapu badania
